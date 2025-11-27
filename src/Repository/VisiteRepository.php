@@ -78,6 +78,10 @@ class VisiteRepository extends ServiceEntityRepository
         }
     }
     
+    public function findTwoLasts(): array{
+        return array_slice($this->findAllOrderBy('datecreation', 'ASC'), 0, 2);
+    }
+    
     /**
      * Supprime une visite
      * @param Visite $visite
