@@ -76,7 +76,7 @@ class VisiteRepository extends ServiceEntityRepository {
     }
 
     public function findTwoLasts(): array {
-        return array_slice($this->findAllOrderBy('datecreation', 'ASC'), 0, 2);
+        return array_slice($this->findAllOrderBy('datecreation', 'DESC'), 0, 2);
     }
 
     /**
